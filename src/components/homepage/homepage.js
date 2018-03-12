@@ -7,6 +7,7 @@ import mouse from './../../assets/mouse.svg'
 import sketch from './../designed_components/sketch'
 import Three from './../designed_components/three'
 import Menu from './../designed_components/menu'
+import Presentation from './presentation'
 
 class Homepage extends Component {
 
@@ -26,6 +27,7 @@ class Homepage extends Component {
 				<p> scroll down for more </p>
 
 				<Menu/>
+				<Presentation/>
 
 			</div>
 		);
