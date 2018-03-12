@@ -5,10 +5,13 @@
   "homepage": "https://aperesso.github.io/portfolio",
   "dependencies": {
     "gh-pages": "^1.1.0",
+    "jquery": "^3.3.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-p5-wrapper": "0.0.4",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "three": "^0.90.0"
   },
   "scripts": {
     "start": "react-scripts start",
