@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
+import {
+	HashRouter as Router,
+	Route,
+	Link
+} from 'react-router-dom'
 
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-			</div>
+			<Router>
+				<div className="App">
+					<Route exact path="/" component={Homepage}/>
+				</div>
+			</Router>
 		);
 	}
 }
