@@ -3,9 +3,22 @@
 	height: 100vH;
 	background: #56202D;
 
+	$mobile : 540px;
+	$tablet : 840px;
+	$desktop: 1040px;
+
 	._contact {
 		position: absolute;
 		left: 25vW;
+		@media screen and (min-width: 0px) and (max-width: $desktop) {
+			left: 0;
+		}
+	}
+
+	.hometext {
+		@media screen and (min-width: 0px) and (max-width: $desktop) {
+			padding-left: 25vW;
+		}
 	}
 
 	.mail {
@@ -13,6 +26,9 @@
 		position: absolute;
 		bottom: 25vH;
 		left: 50%;
+		@media screen and (min-width: 0px) and (max-width: $desktop) {
+			left: 50vW;
+		}
 		transform: translateX(-50%);
 	}
 }

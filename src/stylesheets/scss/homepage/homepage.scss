@@ -6,6 +6,10 @@ html, body {
 	overflow-x: hidden;
 }
 
+$mobile : 540px;
+$tablet : 840px;
+$desktop: 1040px;
+
 .left {
 	position: fixed;
 	height: 100vH;
@@ -14,31 +18,39 @@ html, body {
 	color: #FAFAFA;
 	font-family: 'Raleway', sans-serif;
 
+
 	sketch {
 		z-index: -1000;
+		@media screen and (min-width: 0px) and (max-width: $desktop) {
+			display: none;
+		}
+	}
+
+	.hometext {
+		position: absolute;
+		width: 40vW;
+		left: 5vW;
+		top: 50vH;
+		transform: translateY(-50%);
+		@media screen and (min-width: 0px) and (max-width: $desktop) {
+			display: inline;
+		}
 	}
 
 	h3 {
-		position: absolute;
+		position: relative;
 		text-align: center;
-		margin-top: 40vH;
-		width: 40vW;
-		margin-left: 5vW;
 		letter-spacing: 10px;
 		border-bottom: solid;
 		padding-bottom: 30px;
 	}
 
 	h4 {
-		position: absolute;
+		position: relative;
 		text-align: center;
 		margin-top: 30px;
-		//font-family: 'Sacramento', cursive;
 		font-family: 'Raleway', sans-serif;
 		letter-spacing: 5px;
-		margin-top: 50vH;
-		left: 50%;
-		transform: translateX(-50%);
 	}
 }
 
@@ -48,6 +60,11 @@ html, body {
 	width: 50vW;
 	background: #56202D;
 	left: 50vW;
+
+	@media screen and (min-width: 0px) and (max-width: $desktop) {
+		left: 0;
+		width: 100vW;
+	}
 }
 
 @keyframes pulse {

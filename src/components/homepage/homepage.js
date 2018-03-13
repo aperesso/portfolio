@@ -10,14 +10,16 @@ import Menu from './../designed_components/menu'
 import Presentation from './presentation'
 
 class Homepage extends Component {
-
 	render() {
+
 		return (
 			<div className="Homepage">
 				<div className="left" id="left">
 					<P5Wrapper className="sketch" sketch={sketch} />
-					<h3 className="text"> FRONT END WEB DEVELOPER </h3>
-					<h4 className="text"> Alexia Peresson </h4>
+					<div className="hometext">
+						<h3 className="text"> FRONT END WEB DEVELOPER </h3>
+						<h4 className="text"> Alexia Peresson </h4>
+					</div>
 				</div>
 				<div className="right">
 					<Three/>

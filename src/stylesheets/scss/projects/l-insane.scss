@@ -23,3 +23,30 @@
 		font-family: 'Inconsolata', monospace;
 	}
 }
+
+.Desk {
+
+	margin: 0;
+    width: 100vW;
+    height: 100vH;
+    overflow: hidden;
+    background-color: #1C012A;
+	z-index: 8000;
+
+	svg {
+		max-height: 100vH;
+		width: auto;
+		margin-left: 50vW;
+		transform: translateX(-50%)
+
+	}
+
+	// .Menu {
+	// 	z-index: 10000;
+	//
+	// 	.menu_panel {
+	// 		z-index: 100000;
+	// 	}
+	// }
+
+}

@@ -1,37 +1,47 @@
+$mobile : 540px;
+$tablet : 840px;
+$desktop: 1040px;
+
 .About {
 	width: 100vW;
-	min-height: 100vH;
-	overflow: hidden;
 	background: #ffffff;
+	min-height: 100vH;
 
 	.about {
-
+		background: #ffffff;
 		position: absolute;
 		width: 50vW;
-		height: 100%;
+		@media screen and (min-width: 0px) and (max-width: $desktop) {
+			width: 100vW;
+		}
 
 
 		h2 {
-			margin-top: 5vH;
+			margin-top: 0;
+			padding-top: 5vH;
+			padding-bottom: 5vH;
+			margin-bottom: 5vH;
 			text-align: center;
-			margin-bottom: 7vH;
 			font-family: 'Raleway', sans-serif;
 			color: #e2264f;
+			@media screen and (min-width: 0px) and (max-width: $desktop) {
+				background: #55212d;
+				color: #fafafa;
+			}
 		}
 
 		h4 {
-			position: absolute;
 			margin-left: 5vW;
 			margin-right: 5vW;
-			bottom: 5vH;
 			text-align: center;
 			font-family: 'Raleway', sans-serif;
 			color: #e2264f;
+			background: #ffffff;
 		}
 
 		.qa_wrapper{
 
-			margin-bottom: 6vh;
+			padding-bottom: 5vh;
 
 			p {
 				margin-left: 3vW;
@@ -46,6 +56,12 @@
 				font-weight: bold;
 				color: #e2264f;
 			}
+		}
+	}
+
+	.right {
+		@media screen and (min-width: 0px) and (max-width: $desktop) {
+			display: none;
 		}
 	}
 

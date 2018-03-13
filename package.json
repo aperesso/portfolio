@@ -5,6 +5,7 @@
   "homepage": "https://aperesso.github.io/portfolio",
   "dependencies": {
     "gh-pages": "^1.1.0",
+    "gsap": "^1.20.4",
     "jquery": "^3.3.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

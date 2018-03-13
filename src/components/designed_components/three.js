@@ -3,29 +3,31 @@ import * as THREE from 'three';
 
 class Three extends Component {
 
-
-	// var lrender = function(mesh, start, scene, camera, renderer, mat) {
-	// 	mat.uniforms[ 'time' ].value = .00025 * ( Date.now() - start );
-	// 	renderer.render(scene, camera);
-	// 	requestAnimationFrame( _render );
-	// }
-
 	componentDidMount() {
 		var scene, camera, renderer;
 		var mesh, geo, mat;
 		var start;
 
+		var width, height;
+
+		if (window.innerWidth < 1040) {
+			width = window.innerWidth;
+			height = window.innerHeight;
+		} else {
+			width = window.innerWidth / 2;
+			height = window.innerHeight;
+		}
 
 		start = Date.now();
 		scene = new THREE.Scene();
-		camera = new THREE.PerspectiveCamera( 75, window.innerWidth * 0.5 / window.innerHeight, 0.1, 1000 );
+		camera = new THREE.PerspectiveCamera( 75, width / height, 0.1, 1000 );
 		renderer = new THREE.WebGLRenderer({
 			antialias: true,
 			alpha: true
 		});
 
 		camera.position.z = 50;
-		renderer.setSize( window.innerWidth / 2, window.innerHeight );
+		renderer.setSize( width, height);
 		this.refs.anchor.appendChild(renderer.domElement);
 		renderer.setPixelRatio( window.devicePixelRatio );
 
@@ -51,18 +53,28 @@ class Three extends Component {
 		}
 		loop();
 
+		window.addEventListener('resize', function () {
+
+			if (window.innerWidth < 1040) {
+				width = window.innerWidth;
+				height = window.innerHeight;
+			} else {
+				width = window.innerWidth / 2;
+				height = window.innerHeight;
+			}
+			renderer.setSize(width, height);
+			camera.aspect = width / height;
+			camera.updateProjectionMatrix();
+		});
 	}
 
 	render() {
-		const style = {
-			width: window.innerWidth/2,
-			height: window.innerHeight,
-		}
 		return(
-			<div className='anch' ref='anchor' style={style}>
+			<div className='anch' ref='anchor'>
 			</div>
 		)
 	}
+
 }
 
 export default Three;

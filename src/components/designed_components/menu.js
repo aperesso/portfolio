@@ -18,12 +18,12 @@ class Menu extends Component {
 	handleClick() {
 		var current_state = this.state.isToggleOn;
 		if (!current_state) {
-			$(".menu_panel").animate({
+			$(".menu_panel").stop().animate({
 				left: "0vW"
 			}, 2000);
 		}
 		else {
-			$(".menu_panel").animate({
+			$(".menu_panel").stop().animate({
 				left: "100vW"
 			}, 2000);
 		}
@@ -46,11 +46,9 @@ class Menu extends Component {
 					<div className="project_content">
 						<Link to="/l-insane"> <h2> Smokin' hot ! </h2></Link>
 						<Link to="/dollhouse"> <h2> Is it a doll house ? </h2></Link>
-						<Link to="/"> <h2> This desk is flat </h2></Link>
+						<Link to="/desk"> <h2> This desk is flat </h2></Link>
 					</div>
 				</div>
-
-
 			</div>
 		</div>
 	);

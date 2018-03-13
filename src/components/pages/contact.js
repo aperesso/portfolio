@@ -15,8 +15,10 @@ class Contact extends Component {
 		<div className="Contact">
 			<div className="left _contact" id="left">
 				<P5Wrapper className="sketch" sketch={sketch} />
-				<h3> Contact Me </h3>
-				<h4> I am so glad to hear from you </h4>
+				<div className="hometext">
+					<h3> Contact Me </h3>
+					<h4> I am so glad to hear from you </h4>
+				</div>
 				<a href="mailto:aperesso@student.42.fr">
 					<img alt="Mail" src={mail} className="mail"/>
 				</a>
